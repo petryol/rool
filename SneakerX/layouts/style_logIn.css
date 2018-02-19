@@ -28,4 +28,7 @@
 #headerLogo{
 	margin: auto;
 	height: 80px;
+	background: url(../picsDodelat/Logo1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
