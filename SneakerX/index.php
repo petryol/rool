@@ -138,7 +138,7 @@
 				</div>
 			</div>
 			<div id="footer">
-				<span class="specialHeader">Created by Robert Šmíd.</span>
+				<span class="specialHeader">Created by rool.</span>
 			</div>
 			<div id="logInBox">
 				<div class="insideBox">
