@@ -19,23 +19,27 @@
 							<span class="logHeader">PŘIHLÁSIT</span>
 						</div>	
 					</div>	
-					<div class="logBox"></div>
-					<div class="logBox">
-						<form method="post">
-							<input name="id" type="text" placeholder="USERNAME">
-							<input name="email" type="email" placeholder="E-MAIL">
-							<input name="forname" type="text" placeholder="FORENAME">
-							<input name="surname" type="text" placeholder="SURNAME">
-							<input name="password" type="password" placeholder="PASSWORD">
-							<input name="passwordTry" type="password" placeholder="PASSWORD AGAIN">
-							<input name="country" list="countries" placeholder="COUNTRY">
-							<datalist id="countries">
-								<option value="czech">
-							</datalist>
-							<input type="checkbox" name="acceptTerms"> <span>Souhlasím s pravidly této stránky. <a href="#">Přečíst...</a></span>
-							<input value="Zaregistrovat se" type="submit">
-						</form>
-					</div>
+					<div id="boxForLogBox">
+						<div class="logBox" id="register">
+							<form method="post">
+								<input name="id" type="text" placeholder="USERNAME">
+								<input name="email" type="email" placeholder="E-MAIL">
+								<input name="forname" type="text" placeholder="FORENAME">
+								<input name="surname" type="text" placeholder="SURNAME">
+								<input name="password" type="password" placeholder="PASSWORD">
+								<input name="passwordTry" type="password" placeholder="PASSWORD AGAIN">
+								<input name="country" list="countries" placeholder="COUNTRY">
+								<datalist id="countries">
+									<option value="czech">
+								</datalist>
+								<input type="checkbox" name="acceptTerms"> <span>Souhlasím s pravidly této stránky. <a href="#">Přečíst...</a></span>
+								<input value="Zaregistrovat se" type="submit">
+							</form>
+						</div>
+						<div class="logBox" id="log">
+							<h1>LOGIN</h1>
+						</div>
+					</div>	
 				</div>
 			</div>
 			<div id="header">
@@ -45,5 +49,6 @@
 			</div>
 		</div>
 	</div>
+	<script src="../js/logIn/log.js" type="text/javascript"></script>
 </body>
 </html>

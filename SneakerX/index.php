@@ -55,7 +55,7 @@
 							<div id="bestOfBG" class="article">
 								<div class="darkBG">
 									<div class="insideBox">
-										<span class="specialHeader">Nadbídky přímo pro vás:</span>
+										<span class="specialHeader">Nabídky přímo pro vás:</span>
 										<div id="productCard" class="productCard">
 											<div id="closeProductCard"></div>
 										</div>
