@@ -49,11 +49,11 @@ function rs_logIn(){
 	
 	global $db;
 	$dbPriprava = $db->prepare("SELECT *  FROM `user` WHERE `nick` = :user");
-	$dbPriprava->bindParam(':user', $user, PDO::PARAM_STR);
-	$dbPriprava->execute();
+	$dataArr = array(':user' => $user);
+	$dbPriprava->execute($dataArr);
 	$data = $dbPriprava->Fetch();
 	if($data['nick'] !== $user){
-		$_SESSION['vys'] = "nechodí to";
+		$_SESSION['vys'] = "nejde to";
 		$_SESSION['logged'] = 0;
 		header("Location: index.php");
 		header("Connection: close");
@@ -61,7 +61,7 @@ function rs_logIn(){
 	}
 
 	if($data['password'] !== $password){
-		$_SESSION['vys'] = "nechodí to";
+		$_SESSION['vys'] = "nejde to";
 		$_SESSION['logged'] = 0;
 		header("Location: index.php");
 		header("Connection: close");
@@ -69,6 +69,9 @@ function rs_logIn(){
 	}
 
 	$_SESSION['logged'] = 1;
+	$_SESSION['user'] = $user;
 	
 	header("Location: check.php");
+	header("Connection: close");
+	exit();
 }

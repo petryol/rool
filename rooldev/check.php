@@ -10,12 +10,10 @@
 	<?php
 	
 	rs_varLogCheck('logged', 'session');
-	if($_SESSION['logged'] === 1){
-		echo "zdar";
-	}else{
-		echo "tahni";
-	}
+	rs_logCheck();
 	
+	header('Location: admins/' . $_SESSION['user']);
+
 	?>
 </body>
 </html>

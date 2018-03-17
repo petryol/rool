@@ -71,3 +71,10 @@ function rs_varLogCheck($var, $method='post'){
 	}
 	
 }
+function rs_logCheck(){
+	if($_SESSION['logged'] !== 1){
+		echo "tahni";
+		header("Connection: close");
+		exit();
+	}
+}
