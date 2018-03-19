@@ -73,7 +73,7 @@ body{
 	padding-left: 0px;
 	font-size: 19px;
 	font-weight: 100;
-	display: inline-block;
+	display: inline-flex;
 }
 #header ul li{
 	margin-top: 0px;
@@ -519,8 +519,8 @@ body{
 }
 /*scrollBtn*/
 #scrlBtn{
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	background-color: rgba(0,0,0,0.95);
 	position: fixed;
 	bottom: 80px;
