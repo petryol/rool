@@ -94,8 +94,7 @@
 								</div>	
 							</div>
 							<div id="allOffers" class="article">
-								<div class="insideBox">
-									<span class="specialHeader">Nejnovější offers:</span>
+								<div class="insideBoxlo									<span class="specialHeader">Nejnovější offers:</span>
 								</div>
 							</div>
 						</div>
@@ -145,11 +144,14 @@
 					<span>Přihlásit</span>
 					<span>Registrovat</span>
 					<div id="loginBoxInside">
-						<form method="get">
-							<input name="userName" type="text">
+						<form method="post" action="login/login-action.php">
+							<input name="username" type="text">
 							<input name="password" type="password">
 							<input type="submit">
 						</form>
+						<?php
+							echo $_SESSION["return"];
+						?>
 					</div>
 					<div id="closeLogIn"></div>
 				</div>
