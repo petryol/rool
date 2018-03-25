@@ -1,7 +1,7 @@
 <?php 
 	include "autoLoad.php"; 
 	
-	$redirectURL = "http://localhost/rool/rooldev/fb-callback.php";
+	$redirectURL = "https://rooldev.tk/fb-callback.php";
 	$permissions = ['email'];
 	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 
@@ -27,7 +27,6 @@
 			if(isset($_SESSION['vys']) || !empty($_SESSION['vys'])){
 				echo $_SESSION['vys']; 
 			}
-			
 		?>
 	</div>
 </body>
