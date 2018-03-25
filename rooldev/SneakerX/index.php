@@ -144,7 +144,7 @@
 					<span>Přihlásit</span>
 					<span>Registrovat</span>
 					<div id="loginBoxInside">
-						<form method="post" action="login/login-action.php">
+						<form method="post" action="login/google_login_header.php">
 							<input name="username" type="text">
 							<input name="password" type="password">
 							<input type="submit">

@@ -1,6 +1,6 @@
 <?php	
+	session_start();
 	require_once "configFB.php";
-
 	try{
 		$accessToken = $helper->getAccessToken();
 	} catch(\Facebook\Exceptions\FacebookResponseException $e){
@@ -10,9 +10,8 @@
 		echo "SDK Exception: " . $e->getMessage();
 		exit();
 	}
-
 	if(!$accessToken){
-		header('Location: index.php');
+		header('Location: login.php');
 		exit();
 	}
 
@@ -21,9 +20,9 @@
 		$accessToken = $oAuth2Client->getLongLivedAccessToken();
 
 	$response = $FB->get("/me?fields=id, first_name, last_name, email, picture.type(large)", $accessToken);
-	$userData = $response->getGraphNode()->asArray();
-	$_SESSION['userData'] = $userData;
-	$_SESSION['access_token'] = (string) $accessToken;
-	header('Location: profile.php');
+	$userDataF = $response->getGraphNode()->asArray();
+	$_SESSION['userDataF'] = $userDataF;
+	$_SESSION['access_token_f'] = (string) $accessToken;
+	header('Location: fb-profile.php');
 	exit();
 ?>

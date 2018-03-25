@@ -1,9 +1,9 @@
 <?php 
 	include "autoLoad.php"; 
 	
-	$redirectURL = "https://rooldev.tk/fb-callback.php";
+	/*$redirectURL = "https://rooldev.tk/fb-callback.php";
 	$permissions = ['email'];
-	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);
+	$loginURL = $helper->getLoginUrl($redirectURL, $permissions);*/
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 			<input type="text" name="user">
 			<input type="password" name="password">
 			<input type="submit">
-			<input type="button" onClick="window.location='<?php echo $loginURL ?>'" value="Log In with FaceBook">
+			<input type="button" onClick="window.location='<?php //echo $loginURL ?>'" value="Log In with FaceBook">
 		</form>
 		<b><a href="SneakerX/index.php">SneakerX</a></b>
 		<?php 
